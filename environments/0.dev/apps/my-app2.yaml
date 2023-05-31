@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-app-foo
+  name: my-app-bar
   namespace: argocd
   finalizers:
      - resources-finalizer.argocd.argoproj.io
@@ -11,7 +11,7 @@ spec:
   source:
      repoURL: https://github.com/josemiguelgomes/myapp.git
      targetRevision: HEAD
-     path: environments/staging/my-app1
+     path: environments/0.dev/my-app2
   destination:
      server: https://kubernetes.default.svc
   syncPolicy:
